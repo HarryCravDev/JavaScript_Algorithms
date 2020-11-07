@@ -19,3 +19,23 @@ const twoSum = (nums, target) => {
         }
     }
 };
+
+//  @desc   Total number of vowels in a given string.
+const getCount = (str) => {
+    let vowelsCount = 0;
+    const vowels = {
+        a: 'a',
+        e: 'e',
+        i: 'i',
+        o: 'o',
+        u: 'u'
+    }
+    
+    for(let i = 0; i < str.length; i++){
+       if(vowels[str[i]] != null){
+            console.log(str[i]);
+            vowelsCount++;
+       }
+    }
+    return vowelsCount
+}
