@@ -33,7 +33,6 @@ const getCount = (str) => {
     
     for(let i = 0; i < str.length; i++){
        if(vowels[str[i]] != null){
-            console.log(str[i]);
             vowelsCount++;
        }
     }
