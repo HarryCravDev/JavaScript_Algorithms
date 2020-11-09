@@ -38,3 +38,6 @@ const getCount = (str) => {
     }
     return vowelsCount
 }
+
+//  @desc   Array.diff - Function takes two arrays, and returns values that are not included in array 2.
+const arrayDiff1 = (a, b) => a.filter(item => b.indexOf(item) === -1);
