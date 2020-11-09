@@ -41,3 +41,17 @@ const getCount = (str) => {
 
 //  @desc   Array.diff - Function takes two arrays, and returns values that are not included in array 2.
 const arrayDiff1 = (a, b) => a.filter(item => b.indexOf(item) === -1);
+
+
+//  @desc   Multiplication Tables - Function takes two number values, and returns multiplication tables in an array according to input.
+const multiplicationTable = (row,col) => {
+    let answer = [];
+
+    for(let i = 0; i < row; i++){
+        answer.push([]);
+        for(let j = 0; j < col; j++){
+            answer[i].push((j + 1) * (i + 1));
+        }
+    }    
+    return answer
+}
