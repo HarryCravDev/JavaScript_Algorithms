@@ -5,6 +5,7 @@ const camelCase = string => {
     }).join('')
 }
 
+
 //  @desc   Two sum - Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 const twoSum = (nums, target) => {
     const previousValues = {};
@@ -19,6 +20,7 @@ const twoSum = (nums, target) => {
         }
     }
 };
+
 
 //  @desc   Total number of vowels in a given string.
 const getCount = (str) => {
@@ -39,8 +41,22 @@ const getCount = (str) => {
     return vowelsCount
 }
 
+
 //  @desc   Array.diff - Function takes two arrays, and returns values that are not included in array 2.
 const arrayDiff1 = (a, b) => a.filter(item => b.indexOf(item) === -1);
+
+
+//  @desc   Array Difference - Function takes two arrays, and returns values that are not shared between both arrays.
+const diffArray = (arr1, arr2) => {
+    let newArr = [];
+
+    const newArr1 = arr1.filter(item => !arr2.includes(item));
+    const newArr2 = arr2.filter(item => !arr1.includes(item));
+
+    newArr = [...newArr1, ...newArr2 ];
+
+    return newArr;
+}
 
 
 //  @desc   Multiplication Tables - Function takes two number values, and returns multiplication tables in an array according to input.
