@@ -55,3 +55,16 @@ const multiplicationTable = (row,col) => {
     }    
     return answer
 }
+
+
+//  @desc   Delete occurrences of an element if it occurs more than n times - Function takes an array of items and a number for the amount of times each element can appear in the array.
+const deleteNth = (arr,n) => {
+    let result = {};
+
+    return arr.filter(num => {
+        
+        result[num] = (result[num] || 0) + 1;
+
+        return result[num] <= n;
+    })
+}
