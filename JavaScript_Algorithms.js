@@ -84,3 +84,13 @@ const deleteNth = (arr,n) => {
         return result[num] <= n;
     })
 }
+
+
+//  @desc - Function takes two arrays and returns the non-matching elements between the arrays in a new one.
+const diffArray = (arr1, arr2) => {
+  let newArr = arr1
+    .filter((num) => !arr2.includes(num))
+    .concat(arr2.filter((num) => !arr1.includes(num)));
+
+  return newArr;
+};
