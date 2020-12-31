@@ -94,3 +94,16 @@ const diffArray = (arr1, arr2) => {
 
   return newArr;
 };
+
+
+// @desc - Function takes an array as it's first parameter as well as further parametres which will seeked and destroyed from the given array.  
+function destroyer(arr) {
+  const args = [...arguments];
+  args.splice(0, 1);
+
+  return arr.filter((n) => args.indexOf(n) === -1);
+}
+// Test Cases - Below
+// console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
+// console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5));
+// Test Cases - Above
