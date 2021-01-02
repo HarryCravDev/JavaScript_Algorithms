@@ -107,3 +107,23 @@ function destroyer(arr) {
 // console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));
 // console.log(destroyer([3, 5, 1, 2, 2], 2, 3, 5));
 // Test Cases - Above
+
+
+// @desc - FreeCodeCamp's - Wherefore art thou Algo challenge.
+const whatIsInAName = (collection, source) => {
+  let arr = [];
+  // Only change code below this line
+  const keys = Object.keys(source);
+
+  arr = collection.filter((item, index) => {
+    for (let key of keys) {
+      if (!item.hasOwnProperty(key) || item[key] !== source[key]) {
+        return false;
+      }
+    }
+    return true;
+  });
+
+  // Only change code above this line
+  return arr;
+};
